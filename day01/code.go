@@ -59,9 +59,5 @@ func setup(r io.Reader) []string {
 	if err != nil {
 		return nil
 	}
-	matches := re.FindAllString(builder.String(), -1)
-	if matches == nil {
-		return nil
-	}
-	return matches
+	return re.FindAllString(builder.String(), -1)
 }
